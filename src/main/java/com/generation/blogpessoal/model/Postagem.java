@@ -1,3 +1,7 @@
+/* indica que esta Classe define uma entidade,
+ ela será utilizada para gerar uma tabela no Banco de dados da aplicação.*/
+
+
 package com.generation.blogpessoal.model;
 
 import java.time.LocalDateTime;
@@ -12,9 +16,8 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
-@Entity /* indica que esta Classe define uma entidade,
- ela será utilizada para gerar uma tabela no Banco de dados da aplicação.*/
-@Table(name="tb_postagens") /**/
+@Entity 
+@Table(name="tb_postagens")
 public class Postagem {
 	
 	@Id
