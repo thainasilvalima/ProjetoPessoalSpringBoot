@@ -70,11 +70,9 @@ public class PostagemController {
 			if (temaRepository.existsById(postagem.getTema().getId()))
 		return ResponseEntity.status(HttpStatus.OK)
 						.body(postagemRepository.save(postagem));
-		
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
 	}
-	 	return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 
 	@ResponseStatus(HttpStatus.NO_CONTENT)
