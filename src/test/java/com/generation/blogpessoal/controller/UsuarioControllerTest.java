@@ -39,8 +39,7 @@ import com.generation.blogpessoal.service.UsuarioService;
 
 			usuarioRepository.deleteAll();
 
-			usuarioService.cadastrarUsuario(new Usuario(0L, 
-				"Root", "root@root.com", "rootroot", " "));
+			usuarioService.cadastrarUsuario(new Usuario(0L,"Root", "root@root.com", "rootroot", " "));
 
 		}
 		
@@ -125,7 +124,7 @@ import com.generation.blogpessoal.service.UsuarioService;
 	linha 34 = @Autowired, um objeto da Interface UsuarioRepository para limpar o Banco de dados de testes.
 	linha 37 = start() anotado com a anotação @BeforeAll, apaga todos os dados da tabela e cri o usuário root@root.com para testar os Métodos protegidos por autenticação.*/
 	
-/*	linha 49 =	deveCriarUmUsuario() foi antotado com a anotação @Test que indica que este Método executará um teste.
+/*	linha 49 =	deveCriarUmUsuario() foi anotado com a anotação @Test que indica que este Método executará um teste.
 	linha 48 =	@DisplayName configura uma mensagem que será exibida ao invés do nome do Método.
 	linha 51 =	HttpEntity chamado requisicao, recebendo um objeto da Classe Usuario. Nesta etapa, o processo é equivalente ao que o Postman faz em uma requisição do tipo POST: Transforma os Atributos num objeto da Classe Usuario, que será enviado no corpo da requisição (Request Body).
 	linha 54 =	Requisição HTTP será enviada através do Método exchange() da Classe TestRestTemplate e a Resposta da Requisição (Response) será recebida pelo objeto respostado tipo ResponseEntity
